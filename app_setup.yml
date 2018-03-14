@@ -1,0 +1,9 @@
+---
+- name: Install HelloWorld
+  hosts: ec2
+  tasks:
+    - name: Download test HelloWorld
+      get_url:
+        url: https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war
+        dest: /var/lib/tomcat7/webapps
+        mode: 0444
